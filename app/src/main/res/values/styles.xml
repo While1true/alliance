@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/title_back</item>
+        <item name="colorPrimaryDark">@color/title_back</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TabLayoutTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">40px</item>
+    </style>
+    <style name="title_back_style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:src">@drawable/ic_back</item>
+    </style>
+    <!-- 中间大标题的样式 -->
+    <style name="title_txt_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#171717</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!-- 标题栏样式 -->
+    <style name="titlebar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47.5dp</item>
+        <item name="android:background">#ffffff</item>
+        <!--<item name="android:background">#f7688c</item>-->
+    </style>
+</resources>

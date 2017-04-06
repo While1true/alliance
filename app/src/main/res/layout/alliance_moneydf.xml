@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingLeft="15dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/alliance_click_num"-->
+                <!--android:drawablePadding="6dp"-->
+                <!--android:text="点击数"-->
+                <!--android:textColor="#888888"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_click_num"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:textColor="#525252"-->
+                <!--android:textSize="24dp"-->
+                <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:background="#EDEDED" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/alliance_order_num"
+                android:drawablePadding="6dp"
+                android:text="订单数"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#525252"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:background="#EDEDED" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/alliance_jihuo_num"
+                android:drawablePadding="6dp"
+                android:text="激活设备量"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_jihuo_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#525252"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:background="#EDEDED" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/alliance_shouyi_num"
+                android:drawablePadding="6dp"
+                android:textColor="#888888"
+                android:text="预计收益（元）"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/tv_shouyi_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#525252"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="85dp"-->
+    <!--android:paddingTop="20dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingLeft="15dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawableLeft="@drawable/alliance_jihuo_num"-->
+    <!--android:drawablePadding="6dp"-->
+    <!--android:textColor="#888888"-->
+    <!--android:text="激活设备量"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_jihuo_num"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textColor="#525252"-->
+    <!--android:textSize="24sp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+</LinearLayout>

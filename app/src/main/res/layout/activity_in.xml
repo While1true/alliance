@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Views.NoScrollViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fff" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#EDEDED" />
+
+    <RadioGroup
+        android:id="@+id/rg_in"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:paddingTop="5px"
+        android:paddingBottom="5px"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_home_selector"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="#525252"
+            android:textSize="22px" />
+
+        <RadioButton
+            android:id="@+id/rb_sheet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_sheet_selector"
+            android:gravity="center"
+            android:text="报表"
+            android:textColor="#525252"
+            android:textSize="22px" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_mine_selector"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="#525252"
+            android:textSize="22px" />
+    </RadioGroup>
+
+</LinearLayout>

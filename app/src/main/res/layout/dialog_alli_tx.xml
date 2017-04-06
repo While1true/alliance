@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="258dp"
+    android:background="@drawable/dialoge_white_corner_bg"
+    android:layout_height="wrap_content">
+<TextView
+    android:textSize="18sp"
+    android:layout_marginTop="20dp"
+    android:text="请确认提现账户信息"
+    android:textColor="#353535"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    <View
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#EDEDED"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:textColor="#979797"
+        android:textSize="14sp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/tv_account"
+        android:text="支付宝账号"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/account"
+        android:textColor="#353535"
+        android:textSize="17sp"
+        android:layout_marginLeft="30dp"
+        android:text="13959012996"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#979797"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_name"
+        android:text="姓名"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/name"
+        android:textColor="#353535"
+        android:textSize="17sp"
+        android:layout_marginLeft="30dp"
+        android:text="cckk"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#979797"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_money"
+        android:text="结算金额"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/money"
+        android:textColor="#353535"
+        android:textSize="17sp"
+        android:layout_marginLeft="30dp"
+        android:text="100.00"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d8d4d4d4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_neg"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_rect_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/gray_txt_selector"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_pos"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/pink_rect_botmritradius_selector"
+            android:gravity="center"
+            android:text="确认无误"
+            android:textColor="@drawable/white_txt_selector"
+            android:textSize="16sp" />
+        <!--android:layout_marginLeft="11dp"-->
+        <!--style="@android:style/Widget.Material.Light.Button.Borderless"-->
+    </LinearLayout>
+</LinearLayout>
