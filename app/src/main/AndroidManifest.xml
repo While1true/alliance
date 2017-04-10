@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".INActivity" android:screenOrientation="portrait"/>
         <activity android:name=".In.Sheet.AliianceOrderDetail" android:screenOrientation="portrait"/>
+        <activity android:name=".In.Mine.Settings.SetActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".In.Mine.Settings.LPSWActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

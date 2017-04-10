@@ -47,7 +47,7 @@
                 android:gravity="center"
                 android:text="登陆"
                 android:textColor="@drawable/main_rg_selector"
-                android:textSize="32px" />
+                android:textSize="15sp" />
 
             <RadioButton
                 android:id="@+id/rb_sign"
@@ -59,7 +59,7 @@
                 android:gravity="center"
                 android:text="注册"
                 android:textColor="@drawable/main_rg_selector"
-                android:textSize="32px" />
+                android:textSize="15sp" />
         </RadioGroup>
 
         <ImageView

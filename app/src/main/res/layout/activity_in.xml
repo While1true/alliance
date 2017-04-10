@@ -36,8 +36,8 @@
             android:drawableTop="@drawable/ic_home_selector"
             android:gravity="center"
             android:text="首页"
-            android:textColor="#525252"
-            android:textSize="22px" />
+            android:textColor="@drawable/in_rg_textseletor"
+            android:textSize="10sp" />
 
         <RadioButton
             android:id="@+id/rb_sheet"
@@ -48,8 +48,8 @@
             android:drawableTop="@drawable/ic_sheet_selector"
             android:gravity="center"
             android:text="报表"
-            android:textColor="#525252"
-            android:textSize="22px" />
+            android:textColor="@drawable/in_rg_textseletor"
+            android:textSize="10sp" />
 
         <RadioButton
             android:id="@+id/rb_mine"
@@ -60,8 +60,8 @@
             android:drawableTop="@drawable/ic_mine_selector"
             android:gravity="center"
             android:text="我的"
-            android:textColor="#525252"
-            android:textSize="22px" />
+            android:textColor="@drawable/in_rg_textseletor"
+            android:textSize="10sp" />
     </RadioGroup>
 
 </LinearLayout>

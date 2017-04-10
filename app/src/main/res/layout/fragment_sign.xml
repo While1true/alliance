@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical">
 
     <ImageView
@@ -101,7 +102,9 @@
         android:layout_toRightOf="@+id/iv_pass"
         android:background="@null"
         android:hint="密码"
-        android:maxLines="1"
+        android:imeActionLabel="注册"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
         android:textColor="#FFD094"
         android:textColorHint="#FFD094"
         android:textSize="32px" />
@@ -115,39 +118,7 @@
         android:layout_marginRight="60px"
         android:layout_marginTop="4px"
         android:background="#80FFD3BA" />
-    <RelativeLayout
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/sign"
-        android:background="@drawable/main_quickloginbg"
-        android:layout_width="500px"
-        android:layout_marginBottom="65px"
-        android:layout_height="98px">
-        <ImageView
-            android:id="@+id/iv_sbz"
-            android:layout_width="wrap_content"
-            android:scaleType="centerInside"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="14px"
-            android:src="@drawable/ic_main_quicklogin"
-            android:layout_height="match_parent" />
-        <View
-            android:layout_width="2px"
-            android:layout_toRightOf="@+id/iv_sbz"
-            android:layout_marginLeft="14px"
-            android:layout_height="match_parent"
-            android:background="#80ffffff"/>
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="95px"
-            android:textColor="#fff"
-            android:text="用赛百姿登入"
-            android:textSize="32px"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
 
-    </RelativeLayout>
     <TextView
         android:id="@+id/sign"
         android:layout_width="match_parent"

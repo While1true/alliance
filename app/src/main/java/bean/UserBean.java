@@ -14,7 +14,16 @@ public class UserBean implements  Serializable{
      */
 
     private String userid;
+    private String phone;
     private String token;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getUserid() {
         return userid;

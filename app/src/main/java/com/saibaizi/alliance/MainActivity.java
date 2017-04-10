@@ -1,8 +1,6 @@
 package com.saibaizi.alliance;
 
 import android.animation.ValueAnimator;
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Rect;
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentManager;
@@ -10,14 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.Scroller;
-import android.widget.Toast;
 
 import com.saibaizi.alliance.login.LoginF;
 import com.saibaizi.alliance.login.SignF;
@@ -48,8 +41,8 @@ public class MainActivity extends BaseUI {
     private FragmentManager fm;
     private FragmentTransaction ft;
     private ViewTreeObserver.OnGlobalLayoutListener listener;
-    private boolean ishide=true;
-    private long lastpress=0;
+    private boolean ishide = true;
+    private long lastpress = 0;
 
     @Override
     protected void initView() {
@@ -60,7 +53,6 @@ public class MainActivity extends BaseUI {
         sanjiao.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                sanjiao.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 measuredWidth = sanjiao.getMeasuredWidth();
                 if (GlobalDatas.DEBUG)
                     Log.i(GlobalDatas.TAG, "onGlobalLayout: " + measuredWidth);
@@ -73,9 +65,13 @@ public class MainActivity extends BaseUI {
                         sanjiao.setPadding(3 * widthPixels / 4 - measuredWidth / 2, 0, 0, 0);
                         break;
                 }
+                sanjiao.getViewTreeObserver().removeOnGlobalLayoutListener(this);
             }
         });
-        changeLogin();
+
+        ft = fm.beginTransaction();
+        ft.replace(R.id.fl_content, new LoginF()).commit();
+
         rgMain.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -103,32 +99,34 @@ public class MainActivity extends BaseUI {
                 int rootInvisibleHeight = rl.getRootView().getHeight() - rect.bottom;
                 if (rootInvisibleHeight <= 100) {
                     //软键盘隐藏啦
-                    if(!ishide) {
-                        ishide=true;
+                    if (!ishide) {
+                        ishide = true;
 //                        ivTop.setVisibility(View.VISIBLE);
-                        rlRl.scrollTo(0,0);
+                        rlRl.scrollTo(0, 0);
+//                        rlRl.scrollBy(0,-200);
                         if (GlobalDatas.DEBUG)
-                            Log.i(GlobalDatas.TAG, "run: "+rlBottom.getScrollY()+"tt"+rlBottom.getTranslationY()+rlBottom.getHeight());
+                            Log.i(GlobalDatas.TAG, "run: " + rlBottom.getScrollY() + "tt" + rlBottom.getTranslationY() + rlBottom.getHeight());
                     }
 
                 } else {
                     ////软键盘弹出啦
-                    if(ishide) {
-                        ishide=false;
-                        rlRl.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                int[]l=new int[2];
-                                rlBottom.getLocationInWindow(l);
-                                if (GlobalDatas.DEBUG)
-                                    Log.i(GlobalDatas.TAG, "run: "+rlBottom.getScrollY()+"tt"+rlBottom.getTranslationY()+rlBottom.getHeight());
+                    if (ishide) {
+                        ishide = false;
+                        int[] l = new int[2];
+                        rlBottom.getLocationInWindow(l);
+                        if (GlobalDatas.DEBUG)
+                            Log.i(GlobalDatas.TAG, "run: " + rlBottom.getScrollY() + "tt" + rlBottom.getTranslationY() + rlBottom.getHeight());
 //                                ivTop.setVisibility(View.INVISIBLE);
-                             rlRl.scrollTo(0,l[1]-(int)((50-107)*AutoUtils.getPercentHeight1px()));
-                            }
-                        }, 200);
+                        //滑动到radiobuton底部
+//                        rlRl.scrollTo(0, l[1] - (int) ((100) * AutoUtils.getPercentHeight1px()));
+                        rlRl.scrollTo(0, l[1] - (int) ((50 - 107) * AutoUtils.getPercentHeight1px()));
+//                        rlRl.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                rlRl.scrollBy(0,200);
+//                            }
+//                        },100);
                     }
-
-
                 }
             }
         };
@@ -149,18 +147,16 @@ public class MainActivity extends BaseUI {
 
     @Override
     protected void initData() {
-        startActivity(new Intent(this,INActivity.class));
-
     }
 
     @Override
     protected void back() {
-      if(System.currentTimeMillis()-lastpress>2000){
-          lastpress=System.currentTimeMillis();
-          makeText("再按一次退出应用");
-      }else{
-          finish();
-      }
+        if (System.currentTimeMillis() - lastpress > 2000) {
+            lastpress = System.currentTimeMillis();
+            makeText("再按一次退出应用");
+        } else {
+            finish();
+        }
 
     }
 

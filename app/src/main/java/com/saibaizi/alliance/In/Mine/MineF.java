@@ -1,5 +1,6 @@
 package com.saibaizi.alliance.In.Mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +9,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.saibaizi.alliance.In.Mine.Settings.SetActivity;
 import com.saibaizi.alliance.R;
+
+import java.net.URLDecoder;
 
 import base.BaseF;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cz.msebera.android.httpclient.client.utils.URLEncodedUtils;
 
 /**
  * Created by S0005 on 2017/4/6.
@@ -36,8 +41,8 @@ public class MineF extends BaseF {
     TextView tvBind;
     @BindView(R.id.tv_setting)
     TextView tvSetting;
-    @BindView(R.id.tv_clear)
-    TextView tvClear;
+    @BindView(R.id.tv_assistant)
+    TextView tvAssistant;
     @BindView(R.id.tv_about)
     TextView tvAbout;
 
@@ -56,7 +61,7 @@ public class MineF extends BaseF {
         super.initLazyData();
         makeText("我的懒加载成功");
     }
-    @OnClick({R.id.tv_rank_qy, R.id.rl_top, R.id.tv_recommend, R.id.tv_bind, R.id.tv_setting, R.id.tv_clear, R.id.tv_about})
+    @OnClick({R.id.tv_rank_qy, R.id.rl_top, R.id.tv_recommend, R.id.tv_bind, R.id.tv_setting, R.id.tv_assistant, R.id.tv_about})
     public void onClick(View view) {
         makeText(view.getId()+"");
         switch (view.getId()) {
@@ -69,8 +74,9 @@ public class MineF extends BaseF {
             case R.id.tv_bind:
                 break;
             case R.id.tv_setting:
+                startActivity(new Intent(getContext(), SetActivity.class));
                 break;
-            case R.id.tv_clear:
+            case R.id.tv_assistant:
                 break;
             case R.id.tv_about:
                 break;

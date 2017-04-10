@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/titlebar_style"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/img_title_back"
+            style="@style/title_back_style" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_title_back"
+            android:text="返回"
+            android:textColor="#4a4a4a"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title_name"
+            style="@style/title_txt_style"
+            android:text="修改登录密码" />
+    </RelativeLayout>
+    <LinearLayout
+        android:showDividers="middle|end"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30px"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_old"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="#353535"
+            android:textSize="26px"
+            android:textColorHint="#959595"
+            android:hint="请输入原密码"
+            android:layout_width="match_parent"
+            android:layout_height="117px" />
+        <EditText
+            android:id="@+id/et_new"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="#353535"
+            android:textSize="26px"
+            android:textColorHint="#959595"
+            android:hint="请输入新密码"
+            android:layout_width="match_parent"
+            android:layout_height="117px" />
+        <EditText
+            android:id="@+id/et_new_twice"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="#353535"
+            android:textSize="26px"
+            android:textColorHint="#959595"
+            android:hint="请再次输入新密码"
+            android:layout_width="match_parent"
+            android:layout_height="117px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="35px"
+        android:padding="10px"
+        android:text="忘记密码？"
+        android:textColor="#353535"
+        android:textSize="32px" />
+
+    <TextView
+        android:id="@+id/bt_confirm"
+        android:text="确认修改"
+        android:layout_marginTop="178px"
+        style="@style/BT_Textview_Style"
+        />
+</LinearLayout>

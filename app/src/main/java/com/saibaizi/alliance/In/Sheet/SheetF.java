@@ -88,8 +88,8 @@ public class SheetF extends BaseF {
             @Override
             public void login() {
                 super.login();
-                startActivityForResult(new Intent(getContext()
-                        ,MainActivity.class),100);
+//                startActivityForResult(new Intent(getContext()
+//                        ,MainActivity.class),100);
             }
         });
         getTXmessage();

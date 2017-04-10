@@ -91,7 +91,6 @@ public abstract class BaseUI extends AutoLayoutActivity {
     public String getToken(){
         String userbean1 = ((App) getApplication()).getSp().getString(getString(R.string.userbean), "1");
         UserBean userBean = GSONUtils.parseJson(UserBean.class, userbean1);
-//        return userBean==null?"1":userBean.getToken();
-        return "M2JlMGU5NjllODI5ODVhOGRjMjBjNGNkNzJlMjgwZjE=";
+        return userBean==null?"1":userBean.getToken();
     }
 }

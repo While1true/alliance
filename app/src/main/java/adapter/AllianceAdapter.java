@@ -31,6 +31,7 @@ import java.text.DecimalFormat;
 import Constance.GlobalDatas;
 import Constance.NetUrl;
 import Dialogs.AlliTXDialog;
+import Views.LineIndicate;
 import base.BaseUI;
 import bean.AllTXBean;
 import bean.AllianceBean;
@@ -53,15 +54,16 @@ public class AllianceAdapter extends RecyclerView.Adapter {
     AllTXBean TXInfo;
     private MoneyViewPagerAdapter adapter;
 
-    public void clear(){
-           allianceBean=null;
-        context=null;
-        sheetF=null;
-        TXInfo=null;
-        adapter=null;
+    public void clear() {
+        allianceBean = null;
+        context = null;
+        sheetF = null;
+        TXInfo = null;
+        adapter = null;
     }
+
     public AllianceAdapter(SheetF sheetF) {
-        this.sheetF=sheetF;
+        this.sheetF = sheetF;
         this.context = (BaseUI) sheetF.getActivity();
     }
 
@@ -76,7 +78,7 @@ public class AllianceAdapter extends RecyclerView.Adapter {
             case MONEY_DETAIL:
                 return new MoneyViewHolder(View.inflate(context, R.layout.sheet_tixian, null));
             default:
-               return null;
+                return null;
         }
 
     }
@@ -94,7 +96,6 @@ public class AllianceAdapter extends RecyclerView.Adapter {
             setMoneyData((MoneyViewHolder) holder, position);
         }
     }
-
 
 
     public void startMoneyAnimation(final DecimalFormat format, String money, final MoneyViewHolder holder) {
@@ -128,7 +129,8 @@ public class AllianceAdapter extends RecyclerView.Adapter {
         holder.viewPager.setAdapter(adapter);
         holder.viewPager.setOffscreenPageLimit(1);
         holder.viewPager.setCurrentItem(0);
-        holder.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        holder.line_indicate.setUpViewPager(holder.viewPager);
+        holder.line_indicate.setonPagerChagerListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -241,6 +243,8 @@ public class AllianceAdapter extends RecyclerView.Adapter {
         RadioGroup rg_group, rg_indicate;
         ViewPager viewPager;
         View nn;
+
+        LineIndicate line_indicate;
         int lasti = -1;
 
 
@@ -249,6 +253,8 @@ public class AllianceAdapter extends RecyclerView.Adapter {
             tv_tixian = (TextView) itemView.findViewById(R.id.tv_tixian);
             bt_tixian = (TextView) itemView.findViewById(R.id.bt_tixian);
             bt_mingxi = (TextView) itemView.findViewById(R.id.bt_mingxi);
+
+            line_indicate = (LineIndicate) itemView.findViewById(R.id.line_indicate);
 
             bt_tixian.setOnClickListener(this);
             bt_mingxi.setOnClickListener(this);
@@ -266,7 +272,7 @@ public class AllianceAdapter extends RecyclerView.Adapter {
             switch (view.getId()) {
                 case R.id.bt_tixian:
                     try {
-                        if (TXInfo == null || TXInfo.getStatus().equals("1")|| Float.parseFloat(allianceBean.getWait_money())==0) {
+                        if (TXInfo == null || TXInfo.getStatus().equals("1") || Float.parseFloat(allianceBean.getWait_money()) == 0) {
                             Toast.makeText(view.getContext(), "您没有可提现额度", 0).show();
                             return;
                         }
@@ -307,7 +313,7 @@ public class AllianceAdapter extends RecyclerView.Adapter {
                     if (GlobalDatas.DEBUG)
                         Log.i(GlobalDatas.TAG, "success: " + resultCode);
 
-                   sheetF.getTXmessage();
+                    sheetF.getTXmessage();
                 }
             });
         }

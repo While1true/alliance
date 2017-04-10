@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <declare-styleable name="LineIndicate">
+       <attr name="LineWidth" format="dimension"/>
+       <attr name="LineColor" format="color"/>
+       <attr name="LineIndicateColor" format="color"/>
+   </declare-styleable>
+</resources>

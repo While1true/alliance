@@ -150,8 +150,17 @@
             android:background="#fff">
 
         </android.support.v4.view.ViewPager>
-
+        <Views.LineIndicate
+            android:id="@+id/line_indicate"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <RadioGroup
+            android:visibility="gone"
             android:id="@+id/rg_indicate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

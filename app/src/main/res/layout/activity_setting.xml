@@ -1,63 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#fff"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="47.5dp"
-        android:gravity="center"
-        android:text="我的联盟信息"
-        android:textColor="#171717"
-        android:textSize="40px" />
-
+    android:layout_width="match_parent" android:layout_height="match_parent">
     <RelativeLayout
-        android:id="@+id/rl_top"
-        android:layout_width="match_parent"
-        android:layout_height="256px">
+        android:id="@+id/rl_title"
+        style="@style/titlebar_style"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
 
         <ImageView
-            android:id="@+id/iv_photo"
-            android:layout_width="120px"
-            android:layout_height="120px"
+            android:id="@+id/img_title_back"
+            style="@style/title_back_style" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="27px"
-            android:background="@color/main_color" />
+            android:layout_toRightOf="@+id/img_title_back"
+            android:text="返回"
+            android:textColor="#4a4a4a"
+            android:textSize="16sp"
+            android:visibility="gone" />
 
         <TextView
-            android:id="@+id/tv_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/iv_photo"
-            android:layout_marginLeft="47px"
-            android:layout_toRightOf="@+id/iv_photo"
-            android:text="100100700"
-            android:textColor="#353535"
-            android:textSize="34px" />
-
-        <TextView
-            android:id="@+id/tv_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/iv_photo"
-            android:layout_marginLeft="47px"
-            android:layout_toRightOf="@+id/iv_photo"
-            android:text="6级"
-            android:textColor="#353535"
-            android:textSize="34px" />
-        <TextView
-            android:textSize="22px"
-            android:layout_marginLeft="17px"
-            android:layout_alignTop="@+id/tv_rank"
-            android:layout_toRightOf="@+id/tv_rank"
-            android:textColor="#21A0F1"
-            android:layout_marginTop="7px"
-            android:text="(当前等级佣金比例上限：20%)"
-            android:id="@+id/tv_rank_qy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/title_name"
+            style="@style/title_txt_style"
+            android:text="设置" />
     </RelativeLayout>
     <LinearLayout
         android:divider="@drawable/divider"
@@ -67,9 +39,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_recommend"
+            android:id="@+id/tv_modify_phone"
             android:textColor="#353535"
-            android:text="推广"
+            android:text="修改手机号"
             android:textSize="32px"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/ic_go"
@@ -77,9 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="117px" />
         <TextView
-            android:id="@+id/tv_bind"
+            android:id="@+id/tv_loginpass"
             android:textColor="#353535"
-            android:text="绑定"
+            android:text="修改登录密码"
             android:textSize="32px"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/ic_go"
@@ -87,9 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="117px" />
         <TextView
-            android:id="@+id/tv_setting"
+            android:id="@+id/tv_paypass"
             android:textColor="#353535"
-            android:text="设置"
+            android:text="修改支付密码"
             android:textSize="32px"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/ic_go"
@@ -97,9 +69,9 @@
             android:layout_width="match_parent"
             android:layout_height="117px" />
         <TextView
-            android:id="@+id/tv_assistant"
+            android:id="@+id/tv_push"
             android:textColor="#353535"
-            android:text="客服"
+            android:text="推送"
             android:textSize="32px"
             android:layout_marginTop="50px"
             android:gravity="center_vertical"
@@ -108,9 +80,9 @@
             android:layout_width="match_parent"
             android:layout_height="117px" />
         <TextView
-            android:id="@+id/tv_about"
+            android:id="@+id/tv_clear"
             android:textColor="#353535"
-            android:text="关于赛手"
+            android:text="清理缓存"
             android:textSize="32px"
             android:gravity="center_vertical"
             android:drawableRight="@drawable/ic_go"
